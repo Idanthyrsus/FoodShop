@@ -5,6 +5,8 @@ Stack: SwifUI, Combine
 
 Architecture: Clean MVVM
 
+Supports Dark and Light mode
+
 <img width="200" alt="Screenshot 2023-06-30 at 15 00 36" src="https://github.com/Idanthyrsus/FoodShop/assets/105043706/2e8dcfd6-712c-47e5-86fb-9e84f77c0f13">
 <img width="200" alt="Screenshot 2023-06-30 at 15 00 53" src="https://github.com/Idanthyrsus/FoodShop/assets/105043706/daaa132b-35f4-4e9f-9860-202d4ab22cfd">
 <img width="200" alt="Screenshot 2023-06-30 at 15 01 03" src="https://github.com/Idanthyrsus/FoodShop/assets/105043706/3a5a7cef-4388-46ff-9dfc-be5fbe98973c">
