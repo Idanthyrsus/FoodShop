@@ -33,7 +33,7 @@ struct OrderCardView: View {
                 .offset(x: 100, y: -180)
         }
         .frame(width: 343, height: 446)
-        .background(Color.white)
+        .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
     }

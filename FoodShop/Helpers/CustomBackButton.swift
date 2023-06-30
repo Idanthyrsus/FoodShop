@@ -18,8 +18,11 @@ struct CustomBackButton: View {
         }) {
             HStack(spacing: 0) {
                 Image("vector-3")
+                    .renderingMode(.template)
                     .resizable()
                     .frame(width: 6, height: 12)
+                    .foregroundColor(Color.theme.backButtonColor)
+                    
             }
             .padding(.leading)
         }

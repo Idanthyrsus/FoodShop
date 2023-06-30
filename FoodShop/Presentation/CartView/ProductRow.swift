@@ -19,7 +19,9 @@ struct ProductRow: View {
                 .frame(width: 62, height: 62)
                 .foregroundColor(Color.theme.itemBackground)
                 .overlay(alignment: .center) {
-                    ImageLoadingView(urlString: dish.imageURL ?? "", widthSize: 45.5, heightSize: 47.21)
+                    ImageLoadingView(urlString: dish.imageURL ?? "",
+                                     widthSize: 45.5,
+                                     heightSize: 47.21)
                 }
             namePriceWeight
             Spacer()
@@ -62,10 +64,11 @@ extension ProductRow {
                     }
                 } label: {
                     Image("minus")
+                        .renderingMode(.template)
                         .resizable()
                         .frame(width: 24, height: 24)
+                        .foregroundColor(Color.theme.counterColor)
                 }
-               
                 .padding(.leading, 30)
                
                 Text("\(count)")
@@ -78,8 +81,10 @@ extension ProductRow {
                     cartViewModel.increasePrice(product: dish)
                 } label: {
                     Image("plus")
+                        .renderingMode(.template)
                         .resizable()
                         .frame(width: 24, height: 24)
+                        .foregroundColor(Color.theme.counterColor)
                 }
                 .padding(.trailing, 30)
             }

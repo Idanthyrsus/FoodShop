@@ -13,7 +13,9 @@ extension Color {
 }
 
 struct ColorTheme {
-    let secondaryText = Color("dateLabel")
+    let secondaryText = Color("secondaryText")
     let itemBackground = Color("itemBackground")
     let buttonBackground = Color("buttonBackground")
+    let backButtonColor = Color("backButtonColor")
+    let counterColor = Color("counter")
 }
