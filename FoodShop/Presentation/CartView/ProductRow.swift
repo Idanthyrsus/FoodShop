@@ -89,6 +89,7 @@ extension ProductRow {
                 .padding(.trailing, 30)
             }
         }
+        .frame(width: 128)
     }
 }
 
