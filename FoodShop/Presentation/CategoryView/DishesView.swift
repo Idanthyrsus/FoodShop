@@ -91,7 +91,9 @@ struct DishesView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle(navigationTitle)
             
-            OrderCardView(cartViewModel: cartViewModel, isPresented: $showingSheet, dish: dish)
+            OrderCardView(cartViewModel: cartViewModel,
+                          isPresented: $showingSheet,
+                          dish: dish)
                 .offset(y: showingSheet ? 0 : 1000)
                 .animation(.easeInOut(duration: 0.5), value: showingSheet)
         }

@@ -31,7 +31,6 @@ struct TabBarView: View {
                 }
             
             CartView(cartViewModel: cartViewModel)
-                .environmentObject(cartViewModel)
                 .tabItem {
                     VStack {
                         Image("cart")

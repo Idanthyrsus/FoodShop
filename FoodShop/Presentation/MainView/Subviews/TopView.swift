@@ -22,6 +22,7 @@ struct TopView: View {
                     .font(Font.custom("SF-Pro-Display-Bold", size: 14))
                     .foregroundColor(Color.theme.secondaryText)
             }
+            
             Spacer()
             Image("Profile")
                 .resizable()

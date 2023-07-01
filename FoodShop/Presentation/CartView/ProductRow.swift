@@ -10,8 +10,8 @@ import SwiftUI
 struct ProductRow: View {
     
     @ObservedObject var cartViewModel: CartViewModel
-    var dish: Dish
     @State var count: Int = 1
+    var dish: Dish
     
     var body: some View {
         HStack {
@@ -95,6 +95,6 @@ extension ProductRow {
 
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProductRow(cartViewModel: CartViewModel(), dish: Dish.mockData, count: 1)
+        ProductRow(cartViewModel: CartViewModel(), count: 1, dish: Dish.mockData)
     }
 }
