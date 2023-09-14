@@ -57,7 +57,7 @@ extension ProductRow {
                 
                 Button {
                     if count == 1 {
-                        cartViewModel.removeFromCart(product: dish)
+                      cartViewModel.removeFromCart(product: dish)
                     } else if count > 1 {
                         count -= 1
                         cartViewModel.decreasePrice(product: dish)
@@ -93,8 +93,3 @@ extension ProductRow {
     }
 }
 
-struct ProductRow_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductRow(cartViewModel: CartViewModel(), count: 1, dish: Dish.mockData)
-    }
-}

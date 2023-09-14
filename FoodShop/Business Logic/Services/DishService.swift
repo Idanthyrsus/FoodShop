@@ -4,8 +4,6 @@
 //
 //  Created by Alexander Korchak on 28.06.2023.
 //
-
-import Foundation
 import Combine
 
 protocol DishServiceProtocol {
@@ -17,8 +15,8 @@ final class DishService: DishServiceProtocol {
     
     var networkService: NetworkServiceProtocol
     
-    init(networkService: NetworkServiceProtocol = NetworkService()) {
-        self.networkService = networkService
+    init(networkService: NetworkServiceLocator = NetworkServiceLocatorImplementation()) {
+      self.networkService = networkService.networkService()
     }
     
     func getDishes() -> AnyPublisher<Dishes, Error> {

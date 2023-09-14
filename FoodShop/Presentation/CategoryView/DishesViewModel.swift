@@ -17,9 +17,9 @@ final class DishesViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     init(dishes: Dishes = Dishes(dishes: []),
-         dishesService: DishServiceProtocol = DishService()) {
+         dishesService: NetworkServiceLocator = NetworkServiceLocatorImplementation()) {
         self.dishes = dishes
-        self.dishesService = dishesService
+      self.dishesService = dishesService.dishService()
         getDishes()
     }
   

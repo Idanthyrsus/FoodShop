@@ -19,8 +19,13 @@ struct DishItemView: View {
                     .frame(width: 109, height: 109)
                     .foregroundColor(backroundColor)
                 
-                ImageLoadingView(urlString: dish.imageURL ?? "", widthSize: 80, heightSize: 80)
+                ImageLoadingView(
+                  urlString: dish.imageURL ?? "",
+                  widthSize: 80,
+                  heightSize: 80
+                )
             }
+           
             VStack {
                 Text(dish.name ?? "")
                     .lineLimit(2)
@@ -31,9 +36,3 @@ struct DishItemView: View {
     }
 }
 
-struct DishItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        DishItemView(dish: Dish.mockData)
-            
-    }
-}

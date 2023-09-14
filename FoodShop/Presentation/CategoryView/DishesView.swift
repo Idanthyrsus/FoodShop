@@ -45,7 +45,9 @@ struct DishesView: View {
                         
                         Button {
                             self.selection = element
+                          withAnimation(.easeOut(duration: 0.25)) {
                             filteredArray = viewModel.filterDishes(tag: element)
+                          }
                             isSelected = true
                         } label: {
                             Text(element.rawValue)
@@ -53,6 +55,7 @@ struct DishesView: View {
                                 .font(.system(size: 14))
                         }
                     }
+                    
                     .padding(.bottom)
                     .padding(.top)
                 }
@@ -100,11 +103,3 @@ struct DishesView: View {
     }
 }
 
-struct DishesView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            DishesView(navigationTitle: "Dishes", cartViewModel: CartViewModel())
-                .environmentObject(CartViewModel())
-        }
-    }
-}

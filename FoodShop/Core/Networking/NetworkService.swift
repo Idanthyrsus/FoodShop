@@ -16,11 +16,10 @@ protocol NetworkServiceProtocol: AnyObject {
 final class NetworkService: NetworkServiceProtocol {
     
     func get<T>(type: T.Type, url: URL) -> AnyPublisher<T, Error> where T: Decodable {
+      
         return URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
-            .decode(type: T.self, decoder: JSONDecoder())
+            .decode(type: type, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
-    
-    
 }

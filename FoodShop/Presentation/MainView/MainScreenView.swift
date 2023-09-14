@@ -22,6 +22,7 @@ struct MainScreenView: View {
                         DishesView(navigationTitle: category.name ?? "", cartViewModel: cartViewModel)
                     } label: {
                         MainRowView(category: category)
+                        .transition(.opacity.animation(.easeInOut))
                     }
                     .tint(.black)
                 }
@@ -34,10 +35,3 @@ struct MainScreenView: View {
     }
 }
 
-struct MainScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            MainScreenView(cartViewModel: CartViewModel())
-        }
-    }
-}

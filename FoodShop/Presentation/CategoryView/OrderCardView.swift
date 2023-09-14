@@ -121,9 +121,3 @@ extension OrderCardView {
     }
 }
 
-struct OrderCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        OrderCardView(cartViewModel: CartViewModel(), isPresented: .constant(true), dish: Dish.mockData)
-        
-    }
-}
